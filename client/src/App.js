@@ -25,9 +25,10 @@ function App() {
   },[])
 
   function startVideo(){
-    navigator.getUserMedia(
-      {video:{}},
-    stream => video.srcObject= stream
+    navigator.getUserMedia({
+      video:{}
+    },stream=>{ 
+      videoRef.current.srcObject=stream}
     )
   }
   return (
